@@ -40,7 +40,9 @@ Route::middleware("auth")->group(function(){
 Route::post("/job/{job}/applicant",[ApplicantController::class,'store'])->name("applicant.store")->middleware("auth");
 Route::delete("/applicants/{applicant}",[ApplicantController::class,'destroy'])->name("applicant.destroy")->middleware("auth");
 
-
+Route::get("/test",function (){
+    return view("test");
+});
 
 
 
